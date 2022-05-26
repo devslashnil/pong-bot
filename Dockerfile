@@ -10,6 +10,7 @@ WORKDIR /app
 COPY go.mod ./
 RUN go mod download
 
+# make it find all files
 COPY *.go ./
 
 RUN go build -o /assistant-bot
